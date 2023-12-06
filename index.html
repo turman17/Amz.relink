@@ -1,0 +1,158 @@
+<!--DOCTYPE html-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--==Title============================-->
+    <title>Product Page HTML</title>
+    <!--==CSS==============================-->
+    <link rel="stylesheet" href="main.css" />
+    <!--==Poppins-font=====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--==Using-Font-Awesome-for-Icons=====-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!--==Product-Page=================================-->
+    <section id="product-page">
+    <div class="centering-container">
+      <div class="product-details">
+        <!--**Img*************************-->
+        <div class="product-img">
+          <!-- Swiper Slider -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!--**1******-->
+              <div class="swiper-slide">
+                <img src="image1.jpg" />
+              </div>
+              <!--**2******-->
+              <div class="swiper-slide">
+                <img src="image3.jpg" />
+              </div>
+              <!--**3******-->
+              <div class="swiper-slide">
+                <img src="image2.jpg" />
+              </div>
+              <!--**4******-->
+              <div class="swiper-slide">
+                <img src="image4.jpg" />
+              </div>
+            </div>
+
+            <!--btns-->
+            <div class="slider-btns">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+        <!--**Text************************-->
+        <div class="product-text">
+          <!--category-->
+          <span class="product-category">Woodcrafts/Unfinished Wood</span>
+          <h3>45 PCS Wood Craft Kit</h3>
+          <span class="product-price">$135.3</span>
+          <ul>
+            <li>
+              1. Great crafting kit of 45 pieces which are great for your DIY
+              projects, holiday crafts or wood burning.
+            </li>
+            <li>
+              2. The unfinished wood rounds are crafted from natural wood, with
+              a smooth and sturdy surface that is effortless to stain and paint.
+            </li>
+            <li>
+              3. Our unfinished wood slices are versatile for numerous DIY craft
+              projects, such as hand-painting, photo transfer, background wall
+              decoration, door signs, Christmas decoration, holiday decoration,
+              wedding centrepiece decoration, and more.
+            </li>
+            <li>
+              4. Set Includes: 12 in wooden rounds, 12 wooden balls, 12
+              double-sided adhesive tape, 2 brushes, 6 colors of acrylic paints,
+              30 ft jute rope.
+            </li>
+            <li>
+              5. Magic Wood Slices Kit this is the perfect gift for anyone who
+              loves to make different DIY crafts.
+            </li>
+          </ul>
+
+          <!--btn-->
+          <div class="product-button">
+            <a
+              href="https://www.amazon.com/dp/B0BY8T87MR?th=1"
+              class="add-bag-btn"
+              >Add To Bag</a
+            >
+            <a
+              href="https://www.amazon.com/dp/B0BY8T87MR?th=1"
+              class="add-wishlist-btn"
+              >Add To Wishlist</a
+            >
+          </div>
+          <!--help-btn-->
+          <a href="mailto:turman1701@gmail.com" class="help-btn"
+            >Need Any Help?</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--==Jquery===========================-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1, // Set slidesPerView to 1 for all screen sizes
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          450: {
+            slidesPerView: 1, // Set slidesPerView to 1 for screens with a max width of 450px
+            spaceBetween: 0,
+          },
+          820: {
+            slidesPerView: 1, // Set slidesPerView to 1 for screens with a max width of 820px
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 1, // Set slidesPerView to 1 for screens with a max width of 1024px
+            spaceBetween: 0,
+          },
+        },
+      });
+
+      $(".s-checkbox").on("change", function () {
+        $(".s-checkbox").not(this).prop("checked", false);
+      });
+    </script>
+  </body>
+</html>
